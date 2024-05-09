@@ -2,15 +2,20 @@
 
 ### Table of contents
 
-1. [Introduction](#introduction)
-2. [Architecture](#architecture)
-3. [Prerequisites](#prerequisites)
-4. [Tools and services](#tools-and-services)
-5. [Usage](#usage)
-6. [Clean up](#clean-up)
-7. [Reference](#reference)
-8. [Contributing](#contributing)
-9. [License](#license)
+- [AWS Plaid Demo](#aws-plaid-demo)
+    - [Table of contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Architecture](#architecture)
+  - [Prerequisites](#prerequisites)
+  - [Tools and services](#tools-and-services)
+  - [Usage](#usage)
+      - [Parameters](#parameters)
+      - [Installation](#installation)
+      - [Testing the Application](#testing-the-application)
+  - [Clean up](#clean-up)
+  - [Reference](#reference)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Introduction
 
@@ -64,12 +69,12 @@ The architecture consists of a [React](https://reactjs.org/) application hosted 
 3. Plaid: Ensure you have both a `client_id` and `Sandbox Secret` available on the [Keys](https://dashboard.plaid.com/team/keys) page
 
 ```
-git clone https://github.com/<GitHubUserName>/aws-plaid-demo-app
+git clone https://github.com/deleomike/aws-plaid-demo-app
 cd aws-plaid-demo-app
 sam build --use-container --parallel --cached
 sam deploy \
   --guided \
-  --tags "GITHUB_ORG=<GitHubUserName> GITHUB_REPO=aws-plaid-demo-app"
+  --tags "GITHUB_ORG=deleomike GITHUB_REPO=aws-plaid-demo-app"
 ```
 
 SAM will then prompt you to provide values for the missing parameters listed above:
@@ -80,7 +85,7 @@ Setting default arguments for 'sam deploy'
 Stack Name [sam-app]: aws-plaid-demo-app
 AWS Region [us-east-1]:
 Parameter Environment [dev]:
-Parameter GitHubOrg: <GitHubUserName>
+Parameter GitHubOrg: deleomike
 Parameter GitHubRepo [aws-plaid-demo-app]:
 Parameter PlaidClientId: *************
 Parameter PlaidSecretKey: *************
